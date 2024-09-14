@@ -18,3 +18,7 @@
         --gradient-color-4: #b9beff;
     }
 }
+
+#gradient-canvas {
+    z-index: -1;
+}
