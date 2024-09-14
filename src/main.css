@@ -10,6 +10,13 @@
         src: url(/Aileron-Thin.otf);
     }
 
+    @font-face { 
+        font-family: 'aileron-bold';
+        font-style: normal;
+        font-weight: normal;
+        src: url(/Aileron-Regular.otf);
+    }
+
     #gradient-canvas {
         @apply w-full h-full;
         --gradient-color-1: #c3e4ff; 
@@ -19,6 +26,6 @@
     }
 }
 
-#gradient-canvas {
+.z-back {
     z-index: -1;
 }

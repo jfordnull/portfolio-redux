@@ -17,10 +17,10 @@ gltfLoader.load(
         scene.add(gltf.scene);
         jacobModel = gltf.scene;
         camera.lookAt(jacobModel.position);
-        jacobModel.position.set(0,-3.25,0);
+        jacobModel.position.set(-.25,-3.25,0);
     }
 );
-const pointLight1 = new THREE.PointLight( 0xffffff, 2, 0, 0 );
+const pointLight1 = new THREE.PointLight( 0xffffff, 4, 0, 0 );
 pointLight1.position.set( 500, 500, 500 );
 scene.add( pointLight1 );
 const pointLight2 = new THREE.PointLight( 0xffffff, 1, 0, 0 );
@@ -48,6 +48,7 @@ renderer.setAnimationLoop( animate );
 effect = new AsciiEffect( renderer, ' .:-+*=%@#', { invert: false } );
 effect.setSize( sizes.width, sizes.height );
 effect.domElement.style.color = 'black';
+effect.domElement.style.fontWeight = 'bolder';
 
 canvas.parentNode.replaceChild(effect.domElement, canvas);
 
@@ -72,7 +73,7 @@ function animate() {
 
     const elapsedTime = clock.getElapsedTime()
 
-    if(jacobModel) jacobModel.rotation.y = elapsedTime;
+    if(jacobModel) jacobModel.rotation.y = elapsedTime * 0.75;
 
     effect.render( scene, camera );
 

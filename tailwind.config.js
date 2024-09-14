@@ -3,7 +3,8 @@ module.exports = {
     content: ["./src/**/*.{html,js}"],
     theme: {
       fontFamily: {
-        'body': ['aileron']
+        'body': ['aileron'],
+        'body-bold': ['aileron-bold']
       },
       extend: {
         keyframes: {

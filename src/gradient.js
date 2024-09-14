@@ -518,7 +518,7 @@ function normalizeColor(hexCode) {
   * Gradient.updateFrequency(freq)
   */
 
-  const gradient = new Gradient()
+  const gradient = new Gradient();
 
   // Call `initGradient` with the selector to your canvas
-  gradient.initGradient('#gradient-canvas')
+  gradient.initGradient('#gradient-canvas');
