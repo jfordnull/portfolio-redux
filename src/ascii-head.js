@@ -9,16 +9,13 @@ const scene = new THREE.Scene();
 const canvas = document.getElementById("ascii-head");
 const gltfLoader = new GLTFLoader();
 let jacobModel, camera, renderer, effect;
-const sizes = {
-    width: window.innerWidth,
-    height: window.innerHeight
-};
+let sizes = calculateSizes();
 
 // -----------
 // Aspect Ratio and Camera
 // -----------
 camera = new THREE.PerspectiveCamera(50, sizes.width / sizes.height, 1, 1000);
-camera.position.set(0, 0, 7);
+camera.position.set(0, 1, 7);
 
 // -----------
 // Renderer
@@ -30,11 +27,24 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 // ASCII Effect
 effect = new AsciiEffect(renderer, ' .:-+*=%@#', { invert: false });
 effect.setSize(sizes.width, sizes.height);
+effect.domElement.style.width = `${sizes.width}px`;
+effect.domElement.style.height = `${sizes.height}px`;
 effect.domElement.style.color = 'black';
 effect.domElement.style.fontWeight = 'bolder';
 effect.domElement.style.textShadow = '1px 1px 2px black'
 
 canvas.parentNode.replaceChild(effect.domElement, canvas);
+
+// const descriptionText = document.createElement("div");
+// descriptionText.innerText = "An ASCII self-portrait. Modeled in Blender and programmed in Three.js";
+// descriptionText.style.textAlign = "center";
+// descriptionText.style.marginTop = "20px";
+// descriptionText.style.fontFamily = "monospace";
+// descriptionText.style.color = "black";
+// descriptionText.style.fontSize = "16px";
+
+// // Append the description text after the ASCII effect
+// effect.domElement.parentNode.appendChild(descriptionText);
 
 // -----------
 // Load GLTF Model
@@ -67,14 +77,29 @@ scene.add(pointLight2);
 window.addEventListener('resize', onResize);
 
 function onResize() {
-    sizes.width = window.innerWidth;
-    sizes.height = window.innerHeight;
+    sizes = calculateSizes();
 
     camera.aspect = sizes.width / sizes.height;
     camera.updateProjectionMatrix();
 
     renderer.setSize(sizes.width, sizes.height);
     effect.setSize(sizes.width, sizes.height);
+    effect.domElement.style.width = `${sizes.width}px`;
+    effect.domElement.style.height = `${sizes.height}px`;
+}
+
+function calculateSizes() {
+    const windowWidth = window.innerWidth;
+    let width, height;
+    if (windowWidth >= 1280){
+        width = window.innerWidth *.5;
+        height = window.innerHeight *.75;
+    }
+    else{
+        width = window.innerWidth;
+        height = window.innerHeight *.75;
+    }
+    return {width,height};
 }
 
 // -----------
