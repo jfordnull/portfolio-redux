@@ -10,7 +10,7 @@
 
     <!-- Section A -->
     <div class="h-screen flex justify-center items-center font-body text-4xl tracking-widest gap-2 m-4">
-        <canvas id="gradient-canvas" class="opacity-0 h-screen fixed animate-fade-in-slow top-0 left-0 z-back"></canvas>
+        <canvas id="gradient-canvas" class="opacity-0 h-screen fixed animate-fade-in-slow top-0 left-0 z-back pointer-events-none"></canvas>
         <div>
             <div class="text-6xl flex flex-wrap">
                 <h1 class="animate-fade-up">jacobford</h1>
@@ -26,21 +26,21 @@
 
     <!-- Section B -->
     <div class="flex flex-wrap justify-center items-center">
-        <div class="flex flex-col top-1/3 left-48 ml-4 max-w-96">
+        <div class="flex flex-col max-w-96">
             <div class="flex gap-6 mb-2">
                 <h1 class="text-6xl font-body-bold">Hi!</h1>
                 <h1 class="text-6xl font-body">I'm Jacob.</h1>
             </div>
             <div class="text-2xl font-body flex flex-col gap-2">
                 <p>I'm a senior in Computer Science at the University of Missouri Kansas City.</p>
-                <p>This is my web portfolio.</p>
+                <p>This is my portfolio.</p>
             </div>
         </div>
     </div>
-    <div class="overflow-hidden">
+    <div class="overflow-hidden pointer-events-none">
         <canvas id="ascii-head"></canvas>
     </div>
-    <h1 class="text-sm flex justify-center text-center">An ASCII self-portrait. Modeled in Blender and rendered in Three.js</h1>
+    <h1 class="text-sm flex justify-center text-center">An ASCII self-portrait. Modeled in Blender and programmed in Three.js</h1>
 
     <!-- Section C -->
     <div class="h-screen"></div>
@@ -64,7 +64,7 @@
         <div class="group flex flex-col items-center gap-1">
             <a href="https://www.linkedin.com/in/jacob-ford-914559279/" target="_self" rel="noopener noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 1000 1000"
-                class="size-10 fill-black hover:fill-purple-600 animate-fade-in-max-delay opacity-0">
+                class="size-10 fill-gray-700 hover:fill-purple-600 animate-fade-in-max-delay opacity-0">
                     <path d="M195.877.25C88.16.25 0 88.408 0 196.127v607.841c0 107.717 88.158 195.845 195.877 195.845h607.841c107.718 0 195.845-88.127 195.845-195.845V196.127C999.563 88.41 911.436.25 803.718.25H195.877zm49.266 164.948c51.648 0 83.461 33.906 84.443 78.475 0 43.585-32.797 78.444-85.442 78.444h-.969c-50.665 0-83.412-34.857-83.412-78.444 0-44.568 33.738-78.475 85.379-78.475zm445.08 208.31c99.329 0 173.79 64.922 173.79 204.436v260.449H713.06V595.406c0-61.06-21.847-102.718-76.476-102.718-41.704 0-66.562 28.078-77.476 55.202-3.987 9.704-4.967 23.257-4.967 36.832v253.671H403.188s1.981-411.613 0-454.233h150.984v64.324c20.06-30.95 55.942-74.977 136.051-74.977zm-521.556 10.685H319.62v454.202H168.667V384.193z"/>
                 </svg>
             </a>
