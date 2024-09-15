@@ -35,22 +35,11 @@ effect.domElement.style.textShadow = '1px 1px 2px black'
 
 canvas.parentNode.replaceChild(effect.domElement, canvas);
 
-// const descriptionText = document.createElement("div");
-// descriptionText.innerText = "An ASCII self-portrait. Modeled in Blender and programmed in Three.js";
-// descriptionText.style.textAlign = "center";
-// descriptionText.style.marginTop = "20px";
-// descriptionText.style.fontFamily = "monospace";
-// descriptionText.style.color = "black";
-// descriptionText.style.fontSize = "16px";
-
-// // Append the description text after the ASCII effect
-// effect.domElement.parentNode.appendChild(descriptionText);
-
 // -----------
 // Load GLTF Model
 // -----------
 gltfLoader.load(
-    '/jacob.glb',
+    `${import.meta.env.BASE_URL}jacob.glb`,
     (gltf) => {
         jacobModel = gltf.scene;
         scene.add(jacobModel);
