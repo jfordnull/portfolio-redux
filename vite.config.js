@@ -13,5 +13,5 @@ export default {
 		sourcemap: true
 	
 	},
-	base: '/portfolio-redux/' 
+	// base: '/portfolio-redux/' Uncomment to host from Github Pages w/out custom domain
 };
