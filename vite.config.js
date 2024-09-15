@@ -12,5 +12,6 @@ export default {
 		emptyOutDir: true,
 		sourcemap: true
 	
-	}
+	},
+	base: '/portfolio-redux/' 
 };
