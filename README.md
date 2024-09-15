@@ -1,2 +1,6 @@
 # Portfolio Redux
-Working on a new portfolio site. HTML, Tailwind CSS, soon Three.js.
+A redesigned portfolio website. Tailwind CSS, MiniGL, Three.js. To test on a local server clone repo (have Node.js installed) and run
+```
+npm i
+npm run dev
+```
