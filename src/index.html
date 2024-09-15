@@ -6,7 +6,7 @@
     <title>jacobford</title>
     <link href="./main.css" rel="stylesheet">
 </head>
-<body class="m-0 p-0 overflow-x-hidden">
+<body class="m-0 p-0 overflow-x-hidden flex flex-col gap-32">
 
     <section id="top">
         <div class="h-screen flex justify-center items-center font-body text-4xl tracking-widest gap-2 m-4">
@@ -27,7 +27,7 @@
 
     <section id="intro" class="viewport-fade-in h-screen flex justify-center items-center flex-col">
         <div class="flex justify-center items-center sm:max-xl:flex-col font-body flex-wrap">
-            <div class="flex flex-col max-w-96">
+            <div class="flex flex-col max-w-96 *:max-xl:m-2">
                 <div class="flex gap-6 mb-2">
                     <h1 class="text-6xl font-body-bold">Hi!</h1>
                     <h1 class="text-6xl">I'm Jacob.</h1>
@@ -37,13 +37,13 @@
                     <p>This is my portfolio.</p>
                 </div>
                 <div class="flex justify-center text-2xl">
-                    <button class="absolute rounded-md mt-8 border-2 p-1 border-black hover:border-white hover:scale-110 hover:p-2 transition-all duration-300 smooth-scroll" href="#projects">my work</button>
+                    <button class="absolute rounded-md mt-2 xl:mt-8 border-2 p-1 border-black hover:border-white hover:scale-110 hover:p-2 transition-all duration-300 smooth-scroll" href="#projects">my work</button>
                 </div>
             </div>
-            <div class="flex justify-center xl:w-[40%] sm:max-lg:w-full min-w-96 mt-4 sm:max-xl:mt-28">
+            <div class="flex justify-center xl:w-[40%] sm:max-lg:w-full min-w-96 mt-4 *:max-xl:mt-16">
                 <canvas id="ascii-head"></canvas>
             </div>
-            <div class="flex flex-col max-w-96">
+            <div class="flex flex-col max-w-96 *:max-lg:m-2">
                 <div class="border-b-2 border-black">
                     <h1 class="text-6xl font-body">Experience</h1>
                 </div>
