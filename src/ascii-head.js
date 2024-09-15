@@ -18,7 +18,7 @@ const sizes = {
 // Aspect Ratio and Camera
 // -----------
 camera = new THREE.PerspectiveCamera(50, sizes.width / sizes.height, 1, 1000);
-camera.position.set(-4.5, 2, 6);
+camera.position.set(0, 0, 7);
 
 // -----------
 // Renderer
@@ -88,7 +88,6 @@ function animate() {
     if (jacobModel) {
         jacobModel.rotation.y = elapsedTime * 0.65;
     }
-
     effect.render(scene, camera);
 }
 

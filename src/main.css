@@ -26,6 +26,16 @@
     }
 }
 
+@layer utilities {
+    .viewport-fade-in {
+        @apply opacity-0 transition-opacity duration-[1250ms] ease-in-out;
+    }
+
+    .viewport-fade-in.visible {
+        @apply opacity-100;
+    }
+}
+
 .z-back {
     z-index: -1;
 }
