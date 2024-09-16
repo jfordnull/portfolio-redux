@@ -28,7 +28,7 @@
     </section>
 
     <section id="intro" class="viewport-fade-in h-full xl:h-screen flex justify-center items-center flex-col">
-        <div class="flex justify-center items-center sm:max-xl:flex-col font-body flex-wrap">
+        <div class="flex justify-center items-center *:max-xl:flex-col flex-wrap font-body">
             <div class="flex flex-col max-w-96 *:max-xl:m-2">
                 <div class="flex gap-6 mb-2">
                     <h1 class="text-6xl font-body-bold">Hi!</h1>
@@ -45,7 +45,7 @@
             <div class="flex justify-center xl:w-[40%] sm:max-lg:w-full min-w-96 mt-4 *:max-xl:mt-16">
                 <canvas id="ascii-head"></canvas>
             </div>
-            <div class="flex flex-col max-w-96 *:max-lg:m-2">
+            <div class="flex flex-col mb-24 max-w-96 *:max-lg:m-2">
                 <div class="border-b-2 border-black">
                     <h1 class="text-6xl font-body">Experience</h1>
                 </div>
@@ -86,74 +86,113 @@
                 </div>
             </div>
         </div>
-        <h1 class="text-sm flex justify-center text-center invisible xl:visible">An ASCII self-portrait. Modeled in Blender and programmed in Three.js</h1>
+        <h1 class="text-sm flex justify-center text-center invisible 2xl:visible">An ASCII self-portrait. Modeled in Blender and programmed in Three.js</h1>
     </section>
 
     <section id="projects">
-        <div class="lg:h-screen lg:w-screen flex flex-col items-center viewport-fade-in lg:mt-16 font-body text-3xl">
+        <div class="h-screen lg:w-screen flex flex-col items-center viewport-fade-in lg:mt-16 font-body text-3xl">
             <!-- <h1 class="font-body text-lg">(hover to view)</h1> -->
-            <div class="flex h-96 xl:h-2/3 xl:w-2/3">
+
+            <div>
+                <h1 class="text-6xl font-body">Projects</h1>
+            </div>
+            <div class="sm:max-xl:min-h-64 xl:min-h-52 flex justify-center w-full">
+                <div id="content-1" class="tab-content flex-col m-2 xl:w-2/3">
+                    <div>
+                        <div class="flex justify-between border-b-2 border-black items-end">
+                            <h1 class="ml-2 font-body-bold md:tracking-wide text-sm md:text-4xl">Fibonacci Heap</h1>
+                            <h1 class="font-body text-sm md:text-2xl mr-2">Java / Git / Data Structures / Algorithms</h1>
+                        </div>
+                        <p class="font-body-italic text-sm md:text-lg ml-2">
+                            Pictured: A randomly generated connected, undirected, weighted graph at three levels of magnification.
+                            This graph has \(5 \times 10^4\) vertices and \(10^9\) edges.
+                        </p>
+                    </div>
+                    <div class="text-sm md:text-2xl mt-4 font-body m-2">
+                        Implemented Fibonacci Heap priority queue to optimize performance of search algorithms on dense networks
+                        for AI and data science.
+                    </div>
+                    <a href="https://github.com/jfordnull/Fibonacci-Heap-Graph-Algorithms" target="_blank" rel="noopener noreferrer" class="m-2 font-body-bold underline text-sm md:text-xl">
+                        View project on Github.
+                    </a>
+                </div>
+                <div id="content-2" class="tab-content flex-col m-2 xl:w-2/3">
+                    <div>
+                        <div class="flex justify-between border-b-2 border-black items-end">
+                            <h1 class="ml-2 font-body-bold md:tracking-wide text-sm md:text-4xl">Project Space</h1>
+                            <h1 class="font-body text-sm md:text-2xl mr-2">C# / Unity / VR / Git</h1>
+                        </div>
+                        <p class="font-body-italic text-sm md:text-lg ml-2">
+                            Pictured: Screen capture from an Oculus Quest 2 playing Project Space
+                        </p>
+                    </div>
+                    <div class="text-sm md:text-2xl mt-4 font-body m-2">
+                        Collaborated with a team to develop a physics-based spaceflight simulator for VR. UMKC Fall 2022 Hackathon Honorable Mention.
+                    </div>
+                    <a href="https://github.com/jfordnull/CIV-III-Project-Space" target="_blank" rel="noopener noreferrer" class="m-2 font-body-bold underline text-sm md:text-xl">
+                        View project on Github.
+                    </a>
+                </div>
+                <div id="content-3" class="tab-content flex-col m-2 xl:w-2/3">
+                    <div class="flex justify-between border-b-2 border-black items-end">
+                        <h1 class="ml-2 font-body-bold md:tracking-wide text-sm md:text-4xl">Arduino Rasterizer</h1>
+                        <h1 class="font-body text-sm md:text-2xl mr-2">C / Git / Microcontrollers</h1>
+                    </div>
+                    <p class="font-body-italic text-sm md:text-lg ml-2">
+                        Pictured: Arduino Mega 2560 R2 and TFT Display of a custom 3D engine
+                    </p>
+                    <div class="text-sm md:text-2xl mt-4 font-body m-2">Developed a memory-efficent 3D graphics engine in embedded C.
+                        Applied concepts from Linear Algebra and Operating Systems.
+                    </div>
+                    <a href="https://github.com/jfordnull/Arduino-Rasterizer" target="_blank" rel="noopener noreferrer" class="m-2 font-body-bold underline text-sm md:text-xl">
+                        View project on Github.
+                    </a>
+                </div>
+                <div id="content-4" class="tab-content flex-col m-2 xl:w-2/3">
+                    <div class="flex justify-between border-b-2 border-black items-end">
+                        <h1 class="ml-2 font-body-bold md:tracking-wide text-sm md:text-4xl">Portfolio Website</h1>
+                        <h1 class="font-body text-sm md:text-2xl mr-2">HTML / Tailwind CSS / Javascript / Three.js / MiniGL / Vite</h1>
+                    </div>
+                    <p class="font-body-italic text-sm md:text-lg ml-2">
+                        Pictured: A rotating ASCII self-portrait
+                    </p>
+                    <div class="text-sm md:text-2xl m-2 mt-4 font-body">Developed a modern web portfolio and hosted it using Github Pages and Actions for automated build deployment.
+                    </div>
+                    <a href="https://github.com/jfordnull/portfolio-redux" target="_blank" rel="noopener noreferrer" class="m-2 font-body-bold underline text-sm md:text-xl">
+                        View project on Github.
+                    </a>
+                </div>
+            </div>
+            
+            <div class="flex h-96 xl:h-1/2 xl:w-2/3">
                 <div class="flex-1 tab max-w-max overflow-hidden rounded-l-lg" data-target="content-1">
                     <div class="h-full w-auto object-cover flex justify-center items-center">
-                        <div class="absolute text-white z-20">Hover to view.</div>
+                        <div class="absolute text-white z-20 text-lg md:text-xl lg:text-3xl *:max-md:max-w-[0.8rem] text-center">Hover to view.</div>
                         <img src="/GraphAnimation.gif" class="h-full w-auto object-cover block brightness-50">
                     </div>
                 </div>
                 <div class="flex-1 tab max-w-max overflow-hidden" data-target="content-2">
                     <div class="h-full w-auto object-cover flex justify-center items-center">
-                        <div class="absolute text-white z-20">Hover to view.</div>
+                        <div class="absolute text-white z-20 text-sm md:text-xl lg:text-3xl text-center opacity-0 md:opacity-100">Hover to view.</div>
                         <img src="ProjectSpace.webp" class="h-full w-auto object-cover block brightness-50">
                     </div>
                 </div>
-                <div class="flex-1 tab max-w-max overflow-hidden rounded-r-lg" data-target="content-3">
+                <div class="flex-1 tab max-w-max overflow-hidden" data-target="content-3">
                     <div class="h-full w-auto object-cover flex justify-center items-center">
-                        <div class="absolute text-white z-20">Hover to view.</div>
+                        <div class="absolute text-white z-20 text-sm md:text-xl lg:text-3xl text-center opacity-0 md:opacity-100">Hover to view.</div>
                         <img src="Rasterizer.webp" class="h-full w-auto object-cover block brightness-50">
                     </div>
                 </div>
+                <div class="flex-1 tab max-w-max overflow-hidden rounded-r-lg" data-target="content-4">
+                    <div class="h-full w-auto object-cover flex justify-center items-center">
+                        <div class="absolute text-white z-20 text-lg md:text-xl lg:text-3xl *:max-md:max-w-[0.8rem] text-center">Hover to view.</div>
+                        <img src="Portfolio.webp" class="h-full w-auto object-cover block brightness-50">
+                    </div>
+                </div>
             </div>
-            <div id="content-1" class="tab-content flex-col m-2 xl:w-2/3">
-                <div>
-                    <h1 class="font-body text-4xl border-b-2 border-black">Fibonacci Heap</h1>
-                    <p class="font-body-italic text-lg">
-                        Pictured: A randomly generated connected, undirected, weighted graph at three levels of magnification.
-                        This graph has \(5 \times 10^4\) vertices and \(10^9\) edges.
-                    </p>
-                </div>
-                <div class="text-2xl mt-4 font-body">
-                    Implemented Fibonacci Heap priority queue in Java to optimize performance of pathfinding algorithms on dense networks
-                    for AI and data science, reducing time-complexity of Dijkstra's and Prim's algorithms to theoretical optimum.
-                </div>
-                <a href="https://github.com/jfordnull/Fibonacci-Heap-Graph-Algorithms" target="_blank" rel="noopener noreferrer" class="font-body-bold underline text-xl">
-                    View project on Github.
-                </a>
-            </div>
-            <div id="content-2" class="tab-content flex-col m-2 xl:w-2/3">
-                <div>
-                    <h1 class="font-body text-4xl border-b-2 border-black">Project Space</h1>
-                    <p class="font-body-italic text-lg">
-                        Pictured: Screen capture from an Oculus Quest 2 playing Project Space
-                    </p>
-                </div>
-                <div class="text-2xl mt-4 font-body">
-                    Collaborated with a team to develop a physics-based spaceflight simulator for VR. Developed in C# and Unity. 
-                    UMKC Fall 2022 Hackathon Honorable Mention.
-                </div>
-                <a href="https://github.com/jfordnull/CIV-III-Project-Space" target="_blank" rel="noopener noreferrer" class="font-body-bold underline text-xl">
-                    View project on Github.
-                </a>
-            </div>
-            <div id="content-3" class="tab-content flex-col m-2 xl:w-2/3">
-                <h1 class="font-body text-4xl border-b-2 border-black">Arduino Rasterizer</h1>
-                <p class="font-body-italic text-lg">
-                    Pictured: Arduino Mega 2560 R2 and TFT Display of a custom 3D engine
-                </p>
-                <div class="text-2xl mt-4 font-body">Developed a memory-efficent graphics engine in embedded C.
-                    Applied concepts from Linear Algebra and Operating Systems.
-                </div>
-                <a href="https://github.com/jfordnull/Arduino-Rasterizer" target="_blank" rel="noopener noreferrer" class="font-body-bold underline text-xl">
-                    View project on Github.
-                </a>
+
+            <div class="w-full flex justify-center">
+                <button class="absolute rounded-md mt-2 xl:mt-8 border-2 p-1 border-black hover:border-white hover:scale-110 hover:p-2 transition-all duration-300 smooth-scroll" href="#resume">contact me</button>
             </div>
         </div>
     </section>
