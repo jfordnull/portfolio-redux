@@ -88,7 +88,22 @@
     </section>
 
     <section id="projects">
-        <div class="h-screen"></div>
+        <div class="h-screen w-screen flex flex-col justify-center items-center viewport-fade-in">
+            <div class="flex xl:h-2/3 xl:w-2/3">
+                <div class="tab max-w-max overflow-hidden rounded-l-lg" data-target="content-1">
+                    <img src="/GraphAnimation.gif" class="h-full w-auto object-cover block">
+                </div>
+                <div class="tab max-w-max overflow-hidden" data-target="content-2">
+                    <img src="ProjectSpace.webp" class="h-full w-auto object-cover block">
+                </div>
+                <div class="tab max-w-max overflow-hidden rounded-r-lg" data-target="content-3">
+                    <img src="Rasterizer.webp" class="h-full w-auto object-cover block">
+                </div>
+            </div>
+            <div id="content-1" class="tab-content">Graph</div>
+            <div id="content-2" class="tab-content">Space</div>
+            <div id="content-3" class="tab-content">Rasterizer</div>
+        </div>
     </section>
 
     <!-- Socials -->
@@ -173,6 +188,23 @@
             checkFadeElements();
             window.addEventListener('scroll', checkFadeElements);
             window.addEventListener('resize', checkFadeElements);
+        });
+    </script>
+
+    <!-- Project flex container -->
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=>{
+            let sections = document.querySelectorAll('.tab');
+            let contents = document.querySelectorAll('.tab-content');
+            sections.forEach(section => {
+                section.addEventListener('mouseover',()=>{
+                    contents.forEach(c=>c.classList.remove('active'));
+                    sections.forEach(s=>s.style.flex='1');
+                    section.style.flex = '3';
+                    const target = section.getAttribute('data-target');
+                    document.getElementById(target).classList.add('active');
+                });
+            });
         });
     </script>
 </body>
