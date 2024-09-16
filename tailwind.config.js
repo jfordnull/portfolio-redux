@@ -4,7 +4,8 @@ module.exports = {
     theme: {
       fontFamily: {
         'body': ['aileron'],
-        'body-bold': ['aileron-bold']
+        'body-bold': ['aileron-bold'],
+        'body-italic': ['aileron-ital']
       },
       extend: {
         keyframes: {

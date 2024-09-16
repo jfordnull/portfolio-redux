@@ -17,6 +17,13 @@
         src: url(/Aileron-Regular.otf);
     }
 
+    @font-face {
+        font-family: 'aileron-ital';
+        font-style: normal;
+        font-weight: normal;
+        src: url(/Aileron-ThinItalic.otf);
+    }
+
     #gradient-canvas {
         @apply w-full h-full;
         --gradient-color-1: #c3e4ff; 
