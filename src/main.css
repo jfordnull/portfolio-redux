@@ -41,20 +41,25 @@
     .viewport-fade-in.visible {
         @apply opacity-100;
     }
+
+    .pause {
+        animation-play-state: paused;
+    }
+
+    .z-back {
+        z-index: -1;
+    }
+    
+    .tab {
+        transition: flex 0.3s ease;
+    }
+    
+    .tab-content {
+        display:none;
+    }
+    
+    .tab-content.active {
+        display:block;
+    }
 }
 
-.z-back {
-    z-index: -1;
-}
-
-.tab {
-    transition: flex 0.3s ease;
-}
-
-.tab-content {
-    display:none;
-}
-
-.tab-content.active {
-    display:block;
-}
