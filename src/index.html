@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jacobford</title>
     <link href="./main.css" rel="stylesheet">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body class="m-0 p-0 overflow-x-hidden flex flex-col gap-32">
 
@@ -25,7 +26,7 @@
         </div>
     </section>
 
-    <section id="intro" class="viewport-fade-in h-full lg:h-screen flex justify-center items-center flex-col">
+    <section id="intro" class="viewport-fade-in h-full xl:h-screen flex justify-center items-center flex-col">
         <div class="flex justify-center items-center sm:max-xl:flex-col font-body flex-wrap">
             <div class="flex flex-col max-w-96 *:max-xl:m-2">
                 <div class="flex gap-6 mb-2">
@@ -36,7 +37,7 @@
                     <p>I'm a senior in Computer Science at the University of Missouri Kansas City.</p>
                     <p>This is my portfolio.</p>
                 </div>
-                <div class="flex justify-center text-2xl">
+                <div class="flex justify-center text-2xl invisible *:max-xl:visible">
                     <button class="absolute rounded-md mt-2 xl:mt-8 border-2 p-1 border-black hover:border-white hover:scale-110 hover:p-2 transition-all duration-300 smooth-scroll" href="#projects">my work</button>
                 </div>
             </div>
@@ -88,21 +89,69 @@
     </section>
 
     <section id="projects">
-        <div class="h-screen w-screen flex flex-col justify-center items-center viewport-fade-in">
-            <div class="flex xl:h-2/3 xl:w-2/3">
-                <div class="tab max-w-max overflow-hidden rounded-l-lg" data-target="content-1">
+        <div class="lg:h-screen lg:w-screen flex flex-col items-center viewport-fade-in lg:mt-16">
+            <h1 class="font-body text-lg">(hover to view)</h1>
+            <div class="flex h-96 xl:h-2/3 xl:w-2/3">
+                <div class="flex-1 tab max-w-max overflow-hidden rounded-l-lg" data-target="content-1">
                     <img src="/GraphAnimation.gif" class="h-full w-auto object-cover block">
                 </div>
-                <div class="tab max-w-max overflow-hidden" data-target="content-2">
+                <div class="flex-1 tab max-w-max overflow-hidden" data-target="content-2">
                     <img src="ProjectSpace.webp" class="h-full w-auto object-cover block">
                 </div>
-                <div class="tab max-w-max overflow-hidden rounded-r-lg" data-target="content-3">
+                <div class="flex-1 tab max-w-max overflow-hidden rounded-r-lg" data-target="content-3">
                     <img src="Rasterizer.webp" class="h-full w-auto object-cover block">
                 </div>
             </div>
-            <div id="content-1" class="tab-content">Graph</div>
-            <div id="content-2" class="tab-content">Space</div>
-            <div id="content-3" class="tab-content">Rasterizer</div>
+            <div id="content-1" class="tab-content flex-col m-2 xl:w-2/3">
+                <div>
+                    <h1 class="font-body text-4xl border-b-2 border-black">Fibonacci Heap</h1>
+                    <p class="font-body-italic text-lg">
+                        Pictured: A randomly generated connected, undirected, weighted graph at three levels of magnification.
+                        This graph has \(5 \times 10^4\) vertices and \(10^9\) edges.
+                    </p>
+                </div>
+                <div class="text-2xl mt-4 font-body">
+                    Implemented Fibonacci Heap priority queue in Java to optimize performance of pathfinding algorithms on dense networks
+                    for AI and data science, reducing time-complexity of Dijkstra's and Prim's algorithms to theoretical optimum.
+                </div>
+                <a href="https://github.com/jfordnull/Fibonacci-Heap-Graph-Algorithms" target="_blank" rel="noopener noreferrer" class="font-body-bold underline">
+                    View project on Github.
+                </a>
+            </div>
+            <div id="content-2" class="tab-content flex-col m-2 xl:w-2/3">
+                <div>
+                    <h1 class="font-body text-4xl border-b-2 border-black">Project Space</h1>
+                    <p class="font-body-italic text-lg">
+                        Pictured: Screen capture from an Oculus Quest 2 playing Project Space
+                    </p>
+                </div>
+                <div class="text-2xl mt-4 font-body">
+                    Collaborated with a team to develop a physics-based spaceflight simulator for VR. Developed in C# and Unity. 
+                    UMKC Fall 2022 Hackathon Honorable Mention.
+                </div>
+                <a href="https://github.com/jfordnull/CIV-III-Project-Space" target="_blank" rel="noopener noreferrer" class="font-body-bold underline">
+                    View project on Github.
+                </a>
+            </div>
+            <div id="content-3" class="tab-content flex-col m-2 xl:w-2/3">
+                <h1 class="font-body text-4xl border-b-2 border-black">Arduino Rasterizer</h1>
+                <p class="font-body-italic text-lg">
+                    Pictured: Arduino Mega 2560 R2 and TFT Display of a custom 3D engine
+                </p>
+                <div class="text-2xl mt-4 font-body">Developed a memory-efficent graphics engine in embedded C.
+                    Applied concepts from Linear Algebra and Operating Systems.
+                </div>
+                <a href="https://github.com/jfordnull/Arduino-Rasterizer" target="_blank" rel="noopener noreferrer" class="font-body-bold underline">
+                    View project on Github.
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="h-screen flex font-body flex-col justify-center items-center gap-4">
+            <a href="Jacob_Ford_Resume.pdf" download="Jacob_Ford_Resume" target="_blank" rel="noopener noreferrer"><button class="font-body text-4xl border-2 rounded-md border-black p-2 hover:border-white transition-all duration-300 viewport-fade-in">Download my resume.</button></a>
+            <div class="text-2xl m-2 viewport-fade-in">The source code for this website can be found <a href="https://github.com/jfordnull/portfolio-redux" target="_self" rel="noopener noreferrer" class="underline">here</a>.</div>
         </div>
     </section>
 
