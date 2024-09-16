@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jacobford</title>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <script type="module" crossorigin src="/assets/index-Dh6vtbFu.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-B0Y0gt0h.css">
+  <script type="module" crossorigin src="/assets/index-Cr2x-8PB.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BE5ItC4J.css">
 </head>
 <body class="m-0 p-0 overflow-x-hidden flex flex-col gap-32">
 
@@ -21,7 +21,8 @@
                 <h1 class="opacity-0 animate-fade-in-med-delay">I'm a software engineer in Kansas City, MO</h1>
                 <div class="scale-x-0 border-b-2 border-black animate-scale-line-in"></div>
                 <div class="opacity-0 flex justify-center animate-fade-in-slow">
-                    <button class="text-2xl absolute rounded-md border-2 p-1 mt-8 border-black tracking-normal hover:border-white hover:scale-110 hover:p-2 transition-all duration-300 smooth-scroll" href="#intro">about me</button>
+                    <button class="text-2xl 
+                    absolute rounded-md border-2 p-1 mt-8 border-black tracking-normal hover:border-white hover:scale-110 hover:p-2 transition-all duration-300 smooth-scroll" href="#intro">about me</button>
                 </div>
             </div>
         </div>
@@ -38,7 +39,7 @@
                     <p>I'm a senior in Computer Science at the University of Missouri Kansas City.</p>
                     <p>This is my portfolio.</p>
                 </div>
-                <div class="flex justify-center text-2xl invisible *:max-xl:visible">
+                <div class="flex justify-center text-2xl">
                     <button class="absolute rounded-md mt-2 xl:mt-8 border-2 p-1 border-black hover:border-white hover:scale-110 hover:p-2 transition-all duration-300 smooth-scroll" href="#projects">my work</button>
                 </div>
             </div>
@@ -90,17 +91,26 @@
     </section>
 
     <section id="projects">
-        <div class="lg:h-screen lg:w-screen flex flex-col items-center viewport-fade-in lg:mt-16">
-            <h1 class="font-body text-lg">(hover to view)</h1>
+        <div class="lg:h-screen lg:w-screen flex flex-col items-center viewport-fade-in lg:mt-16 font-body text-3xl">
+            <!-- <h1 class="font-body text-lg">(hover to view)</h1> -->
             <div class="flex h-96 xl:h-2/3 xl:w-2/3">
                 <div class="flex-1 tab max-w-max overflow-hidden rounded-l-lg" data-target="content-1">
-                    <img src="/GraphAnimation.gif" class="h-full w-auto object-cover block">
+                    <div class="h-full w-auto object-cover flex justify-center items-center">
+                        <div class="absolute text-white z-20">Hover to view.</div>
+                        <img src="/GraphAnimation.gif" class="h-full w-auto object-cover block brightness-50">
+                    </div>
                 </div>
                 <div class="flex-1 tab max-w-max overflow-hidden" data-target="content-2">
-                    <img src="ProjectSpace.webp" class="h-full w-auto object-cover block">
+                    <div class="h-full w-auto object-cover flex justify-center items-center">
+                        <div class="absolute text-white z-20">Hover to view.</div>
+                        <img src="ProjectSpace.webp" class="h-full w-auto object-cover block brightness-50">
+                    </div>
                 </div>
                 <div class="flex-1 tab max-w-max overflow-hidden rounded-r-lg" data-target="content-3">
-                    <img src="Rasterizer.webp" class="h-full w-auto object-cover block">
+                    <div class="h-full w-auto object-cover flex justify-center items-center">
+                        <div class="absolute text-white z-20">Hover to view.</div>
+                        <img src="Rasterizer.webp" class="h-full w-auto object-cover block brightness-50">
+                    </div>
                 </div>
             </div>
             <div id="content-1" class="tab-content flex-col m-2 xl:w-2/3">
@@ -115,7 +125,7 @@
                     Implemented Fibonacci Heap priority queue in Java to optimize performance of pathfinding algorithms on dense networks
                     for AI and data science, reducing time-complexity of Dijkstra's and Prim's algorithms to theoretical optimum.
                 </div>
-                <a href="https://github.com/jfordnull/Fibonacci-Heap-Graph-Algorithms" target="_blank" rel="noopener noreferrer" class="font-body-bold underline">
+                <a href="https://github.com/jfordnull/Fibonacci-Heap-Graph-Algorithms" target="_blank" rel="noopener noreferrer" class="font-body-bold underline text-xl">
                     View project on Github.
                 </a>
             </div>
@@ -130,7 +140,7 @@
                     Collaborated with a team to develop a physics-based spaceflight simulator for VR. Developed in C# and Unity. 
                     UMKC Fall 2022 Hackathon Honorable Mention.
                 </div>
-                <a href="https://github.com/jfordnull/CIV-III-Project-Space" target="_blank" rel="noopener noreferrer" class="font-body-bold underline">
+                <a href="https://github.com/jfordnull/CIV-III-Project-Space" target="_blank" rel="noopener noreferrer" class="font-body-bold underline text-xl">
                     View project on Github.
                 </a>
             </div>
@@ -142,7 +152,7 @@
                 <div class="text-2xl mt-4 font-body">Developed a memory-efficent graphics engine in embedded C.
                     Applied concepts from Linear Algebra and Operating Systems.
                 </div>
-                <a href="https://github.com/jfordnull/Arduino-Rasterizer" target="_blank" rel="noopener noreferrer" class="font-body-bold underline">
+                <a href="https://github.com/jfordnull/Arduino-Rasterizer" target="_blank" rel="noopener noreferrer" class="font-body-bold underline text-xl">
                     View project on Github.
                 </a>
             </div>
@@ -247,8 +257,16 @@
             sections.forEach(section => {
                 section.addEventListener('mouseover',()=>{
                     contents.forEach(c=>c.classList.remove('active'));
-                    sections.forEach(s=>s.style.flex='1');
+                    sections.forEach(s=>{
+                        s.style.flex='1';
+                        s.firstElementChild.firstElementChild.classList.remove('invisible');
+                        s.firstElementChild.firstElementChild.classList.add('visible');
+                        s.firstElementChild.lastElementChild.classList.add('brightness-50');
+                    });
                     section.style.flex = '3';
+                    section.firstElementChild.firstElementChild.classList.remove('visible');
+                    section.firstElementChild.firstElementChild.classList.add('invisible');
+                    section.firstElementChild.lastElementChild.classList.remove('brightness-50');
                     const target = section.getAttribute('data-target');
                     document.getElementById(target).classList.add('active');
                 });
